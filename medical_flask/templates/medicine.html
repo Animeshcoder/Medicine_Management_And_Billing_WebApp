@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Medicine Details</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px 0;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            dl {
+                display: grid;
+                grid-template-columns: max-content auto;
+                gap: 10px 20px;
+            }
+            dt {
+                grid-column: 1 / 2;
+                font-weight: bold;
+            }
+            dd {
+                grid-column: 2 / 3;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ medicine.name }}</h1>
+            <dl>
+                <dt>Description:</dt>
+                <dd>{{ medicine.description }}</dd>
+                <dt>Expiry Date:</dt>
+                <dd>{{ medicine.expiry_date }}</dd>
+                <dt>Number of Tablets:</dt>
+                <dd>{{ medicine.number_of_tablets }}</dd>
+                <dt>Price per Pack:</dt>
+                <dd>{{ medicine.price_per_pack }}</dd>
+            </dl>
+        </div>
+    </body>
+</html>

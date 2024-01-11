@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 40px 0;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            label {
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #3E8E41;
+            }
+            .error {
+                color: red;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Login</h1>
+            <form method="post" action="{{ url_for('login') }}">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Login">
+            </form>
+
+            <!-- Add your JavaScript code here -->
+            <script>
+
+            // You can add JavaScript code here to add interactivity and dynamic behavior to the page
+            // For example, you can use JavaScript to validate form inputs, show/hide elements on the page, and create interactive elements such as dropdown menus and tabs
+
+            // Here's an example of how you can use JavaScript to validate the form inputs before submitting the form
+            var form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                var username = document.querySelector('#username').value;
+                var password = document.querySelector('#password').value;
+
+                if (!username || !password) {
+                    alert('Please fill in all the fields');
+                    event.preventDefault();
+                }
+            });
+
+            </script>
+        </div>
+    </body>
+</html>

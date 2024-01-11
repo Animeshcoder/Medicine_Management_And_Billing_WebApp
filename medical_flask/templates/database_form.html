@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database Connection Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px 0;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+            form label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            form input[type="text"],
+            form input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+            form input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            form input[type="submit"]:hover {
+                background-color: #3E8E41;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Database Connection Form</h1>
+            <form method="post" action="{{ url_for('database_form') }}">
+                <label for="db_host">Host:</label>
+                <input type="text" id="db_host" name="db_host">
+                <label for="db_user">User:</label>
+                <input type="text" id="db_user" name="db_user">
+                <label for="db_password">Password:</label>
+                <input type="password" id="db_password" name="db_password">
+                <label for="db_name">Database Name:</label>
+                <input type="text" id="db_name" name="db_name">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
